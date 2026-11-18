@@ -24,9 +24,21 @@ const COLECOES = new Set([
   "perfis",
   "aprov",
   "chats",
+  "campanhas",
   "doacoes",
   "receb",
+  "leads",
 ]);
+
+/**
+ * Coleções em que o documento pertence a uma pessoa e o identificador dela é
+ * o próprio id do documento. Quem pede só enxerga e escreve a própria linha,
+ * a não ser que seja da equipe.
+ *
+ * `leads` guarda empresa, CNPJ e contato de quem pediu proposta comercial.
+ * Isso não pode ficar aberto como o mural.
+ */
+const POR_DONO = new Set(["leads"]);
 
 const COOKIE = "ifomme_uid";
 const ANO_EM_SEGUNDOS = 60 * 60 * 24 * 365;
@@ -105,10 +117,17 @@ async function ehAdmin(db, uid) {
   return !!linha;
 }
 
-async function lerColecao(db, nome, uid) {
+async function lerColecao(db, nome, uid, admin) {
   if (nome === "me") {
     const { results } = await db
       .prepare("select id, data from user_data where uid = ?")
+      .bind(uid)
+      .all();
+    return results || [];
+  }
+  if (POR_DONO.has(nome) && !admin) {
+    const { results } = await db
+      .prepare(`select id, data from ${nome} where id = ?`)
       .bind(uid)
       .all();
     return results || [];
@@ -155,9 +174,16 @@ async function gravar(db, nome, id, uid, dados) {
 async function versoes(db, uid) {
   const saida = {};
   for (const nome of COLECOES) {
-    const linha = await db
-      .prepare(`select coalesce(max(updated_at), 0) as v, count(*) as n from ${nome}`)
-      .first();
+    const linha = POR_DONO.has(nome)
+      ? await db
+          .prepare(
+            `select coalesce(max(updated_at), 0) as v, count(*) as n from ${nome} where id = ?`,
+          )
+          .bind(uid)
+          .first()
+      : await db
+          .prepare(`select coalesce(max(updated_at), 0) as v, count(*) as n from ${nome}`)
+          .first();
     saida[nome] = `${linha.v}:${linha.n}`;
   }
   const meu = await db
@@ -193,7 +219,12 @@ export async function onRequest(context) {
     if (partes[0] === "col" && partes.length === 2) {
       const nome = partes[1];
       if (nome !== "me" && !COLECOES.has(nome)) return erro("Coleção desconhecida.", 404);
-      const linhas = await lerColecao(db, nome, uid);
+      const linhas = await lerColecao(
+        db,
+        nome,
+        uid,
+        POR_DONO.has(nome) ? await ehAdmin(db, uid) : false,
+      );
       return json(
         { docs: linhas.map((l) => ({ id: l.id, data: analisar(l.data) })) },
         { headers: cabecalhos },
@@ -204,6 +235,12 @@ export async function onRequest(context) {
       const [, nome, id] = partes;
       if (nome !== "me" && !COLECOES.has(nome)) return erro("Coleção desconhecida.", 404);
       if (!id || id.length > 200) return erro("Identificador inválido.");
+
+      // Numa coleção por dono, o id do documento é o identificador da pessoa.
+      // Mexer no documento de outra pessoa é negado antes de tocar no banco.
+      if (POR_DONO.has(nome) && id !== uid && !(await ehAdmin(db, uid))) {
+        return erro("Este documento não é seu.", 403);
+      }
 
       if (request.method === "PUT") {
         const corpo = await request.json();

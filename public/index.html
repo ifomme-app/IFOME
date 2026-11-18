@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><title>IFOMME - doe o que sobra para quem precisa</title><link rel="canonical" href="/"><meta name="description" content="O IFOMME conecta quem tem o que doar com instituicoes perto, com regras de seguranca alimentar e acompanhamento de cada etapa da doacao."><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><title>IFOMME - doe o que sobra para quem precisa</title><meta name="description" content="O IFOMME conecta quem tem o que doar com instituicoes perto, com regras de seguranca alimentar e acompanhamento de cada etapa da doacao."><link rel="canonical" href="/"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -6,24 +6,24 @@
 <style>
 /* Layout: app shell — left rail on desktop, bottom tab bar on phone; content column of cards & panels */
 :root{
-  --bg:#FFFFFF; --surface:#FFFFFF; --sunk:#F4F4F4; --line:#EBEBEB;
-  --ink:#3B3B3B; --muted:#7A7A7A; --brand:#E5132E; --brand-ink:#FFFFFF;
-  --accent:#FFB400; --accent-soft:#FFF3D1; --brand-soft:#FDE6E9;
-  --ok:#119451; --ok-soft:#E1F5EA; --warn:#A86E00; --crit:#E5132E; --crit-soft:#FDE6E9;
+  --bg:#FFFDFA; --surface:#FFFFFF; --sunk:#F7F2EC; --line:#EEE5DB;
+  --ink:#2F2620; --muted:#756A60; --brand:#CC4700; --brand-ink:#FFFFFF;
+  --accent:#FFC21A; --accent-soft:#FFF2CC; --brand-soft:#FFE8D9;
+  --ok:#0B7A5E; --ok-soft:#DDF3EC; --warn:#8F5E00; --crit:#C81E3A; --crit-soft:#FBE1E6; --on-crit:#FFFFFF;
   --display:"Nunito", "Segoe UI", system-ui, sans-serif;
   --body:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
   --fs:15px; --r:12px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#141414; --surface:#1E1E1E; --sunk:#2A2A2A; --line:#333333;
-  --ink:#F2F2F2; --muted:#A8A8A8; --brand:#FF3B50; --brand-ink:#FFFFFF;
-  --accent:#FFC233; --accent-soft:#3D2C08; --brand-soft:#42171C;
-  --ok:#4CC98A; --ok-soft:#15301F; --warn:#FFC233; --crit:#FF3B50; --crit-soft:#42171C; color-scheme:dark}}
+  --bg:#161210; --surface:#201A17; --sunk:#2C2420; --line:#3A302A;
+  --ink:#F5EEE8; --muted:#B3A69B; --brand:#FF7A33; --brand-ink:#261000;
+  --accent:#FFC94D; --accent-soft:#3D2E0A; --brand-soft:#45230F;
+  --ok:#4CC9A4; --ok-soft:#12332A; --warn:#FFC94D; --crit:#FF7A8C; --crit-soft:#451A22; --on-crit:#2A0A10; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#141414; --surface:#1E1E1E; --sunk:#2A2A2A; --line:#333333;
-  --ink:#F2F2F2; --muted:#A8A8A8; --brand:#FF3B50; --brand-ink:#FFFFFF;
-  --accent:#FFC233; --accent-soft:#3D2C08; --brand-soft:#42171C;
-  --ok:#4CC98A; --ok-soft:#15301F; --warn:#FFC233; --crit:#FF3B50; --crit-soft:#42171C; color-scheme:dark}
+  --bg:#161210; --surface:#201A17; --sunk:#2C2420; --line:#3A302A;
+  --ink:#F5EEE8; --muted:#B3A69B; --brand:#FF7A33; --brand-ink:#261000;
+  --accent:#FFC94D; --accent-soft:#3D2E0A; --brand-soft:#45230F;
+  --ok:#4CC9A4; --ok-soft:#12332A; --warn:#FFC94D; --crit:#FF7A8C; --crit-soft:#451A22; --on-crit:#2A0A10; color-scheme:dark}
 html.big{--fs:17px}
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -52,7 +52,7 @@ main{min-width:0;padding-block:20px 100px;padding-left:max(16px,env(safe-area-in
 .search input{border:0;background:none;outline:none;flex:1;min-width:0}
 .iconbtn{position:relative;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center}
 .iconbtn svg{width:18px;height:18px}
-.dot{position:absolute;top:6px;right:7px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--crit);color:#fff;font-size:10px;font-weight:700;display:grid;place-items:center}
+.dot{position:absolute;top:6px;right:7px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--crit);color:var(--on-crit);font-size:10px;font-weight:700;display:grid;place-items:center}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
 .head h1{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.02em}
 .head p{margin:4px 0 0;color:var(--muted);max-width:60ch}
@@ -101,18 +101,18 @@ select,.inp{border:1px solid var(--line);background:var(--surface);border-radius
 .need{display:flex;flex-direction:column;gap:6px;padding:10px 0;border-bottom:1px solid var(--line)}
 .need:last-child{border-bottom:0}
 .need .t{display:flex;justify-content:space-between;gap:8px;font-size:13.5px}
-.impact{background:var(--brand);color:#fff;border:0}
+.impact{background:var(--brand);color:var(--brand-ink);border:0}
 /* delivery-app look */
 h1,h2,h3,.logo b,.mobilelogo{font-weight:900}
 .head h1{font-weight:900;letter-spacing:-.01em}
 .rail{background:var(--surface)}
 .nav[aria-current="page"]{background:none;color:var(--brand)}
 .chip{border-color:var(--line);color:var(--ink);font-weight:700}
-.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
 .search{background:var(--sunk);border-color:transparent;border-radius:10px;padding:11px 14px}
 .search svg{color:var(--brand)}
 .btn{border-radius:8px;font-family:var(--display);font-weight:800}
-.btn.accent{background:var(--brand);color:#fff}
+.btn.accent{background:var(--brand);color:var(--brand-ink)}
 .btn.ghost{color:var(--brand);border-color:var(--line)}
 .panel,.post,.ong,.stat,.match,.qitem{border-color:var(--line);box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .post.urgent{border-color:var(--line);box-shadow:0 2px 10px rgba(0,0,0,.05),inset 4px 0 0 var(--brand)}
@@ -223,11 +223,69 @@ h1,h2,h3,.logo b,.mobilelogo{font-weight:900}
 .msg.me{align-self:flex-end;align-items:flex-end}
 .msg span{font-size:10.5px;color:var(--muted)}
 .bub{background:var(--surface);padding:9px 13px;border-radius:16px 16px 16px 4px;overflow-wrap:anywhere;white-space:pre-wrap}
-.msg.me .bub{background:var(--brand);color:#fff;border-radius:16px 16px 4px 16px}
+.msg.me .bub{background:var(--brand);color:var(--brand-ink);border-radius:16px 16px 4px 16px}
 .cform{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
 .cform .inp{flex:1}
 .cform .btn svg{width:18px;height:18px}
 .backm{display:none}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.plan{display:flex;flex-direction:column;gap:12px}
+.plan h3{font-size:20px}
+.plan.hot{border-color:var(--brand)}
+.price b{font-family:var(--display);font-weight:900;font-size:28px}
+.price span{display:block;font-size:12.5px;color:var(--muted)}
+.plan>.btn{margin-top:auto;justify-content:center}
+@media (max-width:760px){.tabbar .nav{font-size:9.5px;padding:6px 0}}
+/* game skin */
+.btn{border-radius:12px;box-shadow:0 3px 0 rgba(0,0,0,.22);transition:transform .06s,box-shadow .06s}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.22)}
+.btn.ghost{border-width:2px;box-shadow:0 3px 0 var(--line)}
+.btn:disabled{box-shadow:none}
+.panel,.post,.ong,.stat,.match,.qitem{border-width:2px;border-radius:16px;box-shadow:none}
+.post.urgent{border-color:var(--line);box-shadow:inset 5px 0 0 var(--brand)}
+.chip{border-width:2px;font-weight:800}
+.bar{height:12px}
+.circ span.c{border:2px solid var(--line)}
+.badge:not(.got){opacity:.6}
+.lvb{width:32px;height:32px;display:grid;place-items:center;background:var(--accent);color:#2F2620;font-family:var(--display);font-weight:900;font-size:15px;clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);flex:none}
+.hud{display:flex;align-items:center;gap:8px;border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px 3px 4px;font-weight:800;font-family:var(--display);font-size:13px;white-space:nowrap}
+.hud .hx{display:flex;flex-direction:column;gap:3px}
+.hud .bar{width:70px;height:7px}
+.gcard{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.gcard>.lvb{width:78px;height:78px;font-size:34px}
+.gname{font-family:var(--display);font-weight:900;font-size:26px;line-height:1.1}
+.xpb{height:16px;margin:8px 0 6px}
+.streak{text-align:center;padding:10px 16px;border-radius:14px;background:var(--brand-soft)}
+.streak b{display:block;font-family:var(--display);font-weight:900;font-size:30px;color:var(--brand);line-height:1}
+.streak span{font-size:12px;font-weight:700}
+.xpc{display:inline-block;background:var(--accent);color:#2F2620;font-family:var(--display);font-weight:900;font-size:12.5px;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.mis{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mis:last-of-type{border-bottom:0}
+.mis>div{flex:1;min-width:120px}
+.mck{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-family:var(--display);border:2px solid var(--line);color:var(--muted);flex:none}
+.mis.done .mck{background:var(--ok);border-color:var(--ok);color:var(--surface)}
+.mis.done b{color:var(--muted)}
+.mban{display:flex;gap:16px;align-items:center;border:2px solid var(--accent);background:var(--accent-soft);border-radius:18px;padding:16px 18px;flex-wrap:wrap}
+.mban h2{font-size:21px}
+.masc{width:64px;height:64px;flex:none}
+.scrim.mid{justify-content:center;align-items:center}
+.lvlcard{background:var(--surface);border-radius:24px;padding:30px 28px;text-align:center;max-width:360px;width:calc(100% - 32px);display:flex;flex-direction:column;gap:12px;align-items:center}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:70}
+@media (max-width:760px){.hud .hx{display:none}.hud{padding-right:10px}}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px 36px;margin-top:14px}
+.charts>div{min-width:0}
+.hb{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.hbr{display:grid;grid-template-columns:minmax(84px,140px) 1fr 30px;gap:10px;align-items:center;font-size:13px}
+.hbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hbt{height:14px;border-radius:4px;background:var(--sunk)}
+.hbt i{display:block;height:100%;border-radius:4px;min-width:2px}
+.hbv{text-align:right;font-weight:700}
+.cb{display:flex;gap:10px;height:170px;margin-top:12px}
+.cbc{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center}
+.cbw{position:relative;flex:1;width:100%;border-bottom:1px solid var(--line)}
+.cbw i{position:absolute;bottom:0;left:50%;width:70%;max-width:44px;transform:translateX(-50%);background:var(--brand);border-radius:6px 6px 0 0}
+.cbw span{position:absolute;left:0;right:0;text-align:center;font-size:12px;font-weight:700}
+.cbc small{font-size:12px;color:var(--muted);padding-top:6px}
 .btn svg{width:18px;height:18px;flex:none}
 .loja .mt2{gap:2px 12px}
 .tl .s{padding-right:10px}
@@ -267,7 +325,7 @@ label.chip input{accent-color:var(--brand)}
 
 <div class="app">
   <aside class="rail" aria-label="Navegação">
-    <div class="logo"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="var(--brand)"/><path d="M17 26s-8-4.6-8-10.3A4.6 4.6 0 0 1 17 13a4.6 4.6 0 0 1 8 2.7C25 21.4 17 26 17 26Z" fill="var(--accent)"/><circle cx="17" cy="9" r="2.4" fill="var(--brand-ink)"/></svg><div><b>IFOMME</b><small>Ecossistema da caridade</small></div></div>
+    <div class="logo"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 31S3 22.5 3 12.2A7.7 7.7 0 0 1 17 8a7.7 7.7 0 0 1 14 4.2C31 22.5 17 31 17 31Z" fill="#E11D2E"/></svg><div><b>IFOMME</b><small>Ecossistema da caridade</small></div></div>
     <div id="navD"></div>
     <div class="spacer"></div>
     <button class="nav" id="fontBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18 9 6l5 12M6 14h6M16 18l3-8 3 8M17 16h4"/></svg>Texto maior</button>
@@ -277,8 +335,9 @@ label.chip input{accent-color:var(--brand)}
   <main>
     <div class="wrap">
       <div class="topbar">
-        <div class="mobilelogo"><svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="var(--brand)"/><path d="M17 26s-8-4.6-8-10.3A4.6 4.6 0 0 1 17 13a4.6 4.6 0 0 1 8 2.7C25 21.4 17 26 17 26Z" fill="var(--accent)"/></svg>IFOMME</div>
+        <div class="mobilelogo"><svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 31S3 22.5 3 12.2A7.7 7.7 0 0 1 17 8a7.7 7.7 0 0 1 14 4.2C31 22.5 17 31 17 31Z" fill="#E11D2E"/></svg>IFOMME</div>
         <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="q" type="search" placeholder="Buscar ONG, causa, bairro ou item…" aria-label="Buscar"></label>
+        <span id="hudSlot"></span>
         <button class="iconbtn" id="bell" type="button" aria-label="Notificações"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21a2 2 0 0 0 4 0"/></svg><span class="dot" id="bellN" hidden>0</span></button>
         <button class="iconbtn" data-go="conta" type="button" aria-label="Minha conta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button>
       </div>
@@ -299,8 +358,9 @@ const IC={
  doar:'<path d="M12 21s-8-4.6-8-10.3A4.6 4.6 0 0 1 12 8a4.6 4.6 0 0 1 8 2.7C20 16.4 12 21 12 21Z"/>',
  ongs:'<path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/>',
  inspecao:'<path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
- impacto:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+ impacto:'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4M12 13v4M8 20h8"/>',
  chat:'<path d="M4 5h16v11H9l-5 4z"/>',
+ apoiar:'<path d="M20 12v8H4v-8M2 7h20v5H2zM12 7v13M12 7S10.5 3 8 3.5 8.5 7 12 7Zm0 0s1.5-4 4-3.5S15.5 7 12 7Z"/>',
  conta:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
  equipe:'<circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M17 5a3.5 3.5 0 0 1 0 7M22 20a7 7 0 0 0-4-6.3"/>',
  minhaong:'<path d="M3 21V9l9-6 9 6v12H3zM9 21v-5h6v5M10.5 10.5h3M12 9v3"/>',
@@ -318,8 +378,8 @@ const IC={
 };
 const svg=(k,cls='')=>`<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
 
-const ALLV={mural:"Mural de ações",doar:"Doar",ongs:"ONGs",chat:"Conversas",minhaong:"Minha ONG",inspecao:"Inspeção",impacto:"Meu impacto",equipe:"Equipe",conta:"Minha conta"};
-const SHORT={mural:"Mural",impacto:"Impacto",chat:"Chat",minhaong:"Minha ONG",conta:"Conta"};
+const ALLV={mural:"Mural de ações",doar:"Doar",ongs:"ONGs",chat:"Conversas",minhaong:"Minha ONG",inspecao:"Inspeção",impacto:"Minha jornada",equipe:"Equipe",apoiar:"Planos e apoio",conta:"Minha conta"};
+const SHORT={mural:"Mural",impacto:"Jornada",chat:"Chat",minhaong:"Minha ONG",conta:"Conta",apoiar:"Apoiar"};
 const TIPON={doador:"Doador",ong:"Representante de ONG",inspetor:"Inspetor",equipe:"Equipe IFOMME"};
 let PERF={},APR={},viewAs=null;
 function navFor(){const r=role();return r==="ong"?["mural","minhaong","chat","ongs"]:r==="inspetor"?["inspecao","ongs","mural"]:r==="equipe"?["mural","ongs","chat","inspecao","equipe"]:["mural","doar","ongs","chat","impacto"]}
@@ -332,7 +392,7 @@ const CATS=[
  {k:"higiene",n:"Higiene e saúde",d:"Fraldas, absorventes, kits",i:"pill",u:"kits"},
  {k:"moveis",n:"Móveis e utensílios",d:"Camas, fogão, panelas",i:"sofa",u:"itens"}
 ];
-const COLORS=["#E5132E","#F06A1D","#3A5BA0","#8A4FA3","#B9741A","#2F7F86","#5E6B2A"];
+const COLORS=["#CC4700","#0B7A5E","#3A5BA0","#8A4FA3","#B9741A","#2F7F86","#5E6B2A"];
 
 let ONGS=[],POSTS=[],MINE=[];
 const BLANK={id:"",nome:"ONG removida",causa:"",bairro:"",cidade:"",km:0,status:"pendente",nota:0,benef:0,indic:0,aceita:[],needs:[],desc:"",insp:{}};
@@ -365,13 +425,14 @@ const pct=(a,b)=>Math.min(100,Math.round(a/b*100));
 
 function renderNav(){
   const nav=navFor(),uc=unreadThreads().length,b=(k,l)=>`<button class="nav" type="button" data-go="${k}" ${state.view===k?'aria-current="page"':''}>${svg(k)}<span>${l}</span>${k==="chat"&&uc?`<span class="dot num">${uc}</span>`:""}</button>`;
-  $("#navD").innerHTML=[...nav,"conta"].map(k=>b(k,ALLV[k])).join("");
-  $("#navM").innerHTML=nav.map(k=>b(k,SHORT[k]||ALLV[k])).join("");
+  $("#navD").innerHTML=[...nav,"apoiar","conta"].map(k=>b(k,ALLV[k])).join("");
+  $("#navM").innerHTML=[...nav,"apoiar"].map(k=>b(k,SHORT[k]||ALLV[k])).join("");
   const n=events().filter(e=>e.ts>SEEN.n).length; $("#bellN").textContent=n; $("#bellN").hidden=!n;
+  $("#hudSlot").innerHTML=ready&&hasGame()?hud():"";
 }
 function go(v){if(location.hash!=="#"+v)location.hash=v;else route()}
 function route(){render();window.scrollTo(0,0)}
-function pickView(){const nav=navFor(),h=location.hash.slice(1);state.view=nav.includes(h)||h==="conta"?h:nav[0]}
+function pickView(){const nav=navFor(),h=location.hash.slice(1);state.view=nav.includes(h)||h==="conta"||h==="apoiar"?h:nav[0]}
 /* ---------- perfis ---------- */
 const myReq=()=>PERF[meKey()]||null;
 function okRole(u){const p=PERF[u],a=APR[u];return !!p&&!!a&&a.tipo===p.tipo&&(p.tipo!=="ong"||a.ong===p.ong)}
@@ -399,12 +460,14 @@ function vEquipe(){
  const reqs=Object.keys(PERF).filter(u=>PERF[u]&&PERF[u].tipo&&PERF[u].tipo!=="doador").sort((a,b)=>(PERF[b].ts||0)-(PERF[a].ts||0)),pend=reqs.filter(u=>!okRole(u)).length;
  return `<div class="head"><div><h1>Equipe</h1><p>Aprove quem pode representar uma instituição ou atuar como inspetor.</p></div></div>
  <div class="stats"><div class="stat"><span class="label">Pedidos pendentes</span><div class="big num">${pend}</div></div><div class="stat"><span class="label">Pessoas com perfil</span><div class="big num">${Object.keys(PERF).length}</div></div><div class="stat"><span class="label">ONGs</span><div class="big num">${ONGS.length}</div></div><div class="stat"><span class="label">Verificadas</span><div class="big num">${ONGS.filter(o=>o.status==="verificado").length}</div></div></div>
+ ${dash()}${revPanel()}
  <div class="panel"><h3 style="font-size:17px;margin-bottom:6px">Pedidos de acesso</h3>${reqs.map(u=>{const q=PERF[u],ok=okRole(u);return `<div class="check" style="align-items:center;flex-wrap:wrap"><div style="min-width:0;flex:1"><b>${esc(pname(u))}</b><div class="muted" style="font-size:13px">${TIPON[q.tipo]||esc(q.tipo)}${q.tipo==="ong"?" · "+esc(byId(q.ong).nome):""}</div></div>${ok?'<span class="pill p-ok">Aprovado</span>':'<span class="pill p-warn">Pendente</span>'}${ok?`<button class="btn sm ghost" data-rev="${esc(u)}">Revogar</button>`:`<button class="btn sm" data-apr="${esc(u)}">Aprovar</button>`}</div>`}).join("")||'<p class="muted" style="margin:6px 0 0">Nenhum pedido ainda. Quando alguém escolher o perfil de ONG ou inspetor, o pedido aparece aqui.</p>'}</div>${donsPanel(null)}${exPanel()}`}
 function updNeeds(o,fn){const needs=o.needs.map(x=>({...x}));fn(needs);store.update("ongs",o.id,{needs});render()}
 function vMinha(){const o=byId(myOng());if(!o.id)return `<div class="head"><div><h1>Minha ONG</h1><p>Nenhuma instituição vinculada ao seu perfil ainda.</p></div></div>`;
  const sc=inspScore(o.id)||o.nota,conv=threadList("ong").filter(t=>t.ong===o.id).length;
  return `<div class="head"><div><h1>${esc(o.nome)}</h1><p>${esc(o.causa)} · ${esc(o.bairro)}, ${esc(o.cidade)}</p></div><div>${status(o)}</div></div>
  ${o.pendDoc?`<div class="legal"><b>A inspeção pediu documentos</b><span>Envie à equipe IFOMME os documentos que faltam (CNPJ, estatuto, prestação de contas) e combine a visita pelo chat. <button class="lk" type="button" data-docok="${o.id}">Já enviei</button></span></div>`:""}
+ ${ongMissions(o)}
  <div class="stats"><div class="stat"><span class="label">Inspeção</span><div class="big num">${sc}<span class="muted" style="font-size:15px">/100</span></div></div><div class="stat"><span class="label">Conversas</span><div class="big num">${conv}</div></div><div class="stat"><span class="label">Publicações</span><div class="big num">${POSTS.filter(p=>p.ong===o.id).length}</div></div><div class="stat"><span class="label">Indicações</span><div class="big num">${o.indic||0}</div></div></div>
  <div class="panel"><h3 style="font-size:17px;margin-bottom:4px">Necessidades</h3><p class="muted" style="margin:0 0 6px;font-size:13px">É o que os doadores veem no mural e na busca. Atualize a quantidade recebida sempre que chegar algo.</p>
  ${o.needs.map((n,i)=>`<div class="need"><div class="t"><b>${esc(n.i)} ${n.urg?'<span class="pill p-crit">urgente</span>':""}</b><span class="muted">${esc((CATS.find(c=>c.k===n.c)||{n:""}).n)}</span></div><div class="bar ${n.urg?"urg":""}"><i style="width:${pct(n.q,n.m)}%"></i></div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px"><label for="nq${i}">Recebido</label><input class="inp num" id="nq${i}" type="number" min="0" data-needset="${i}" value="${n.q}" style="width:90px;padding:6px 10px"><span class="muted num">de ${n.m}</span><button class="act" data-needurg="${i}">${n.urg?"Tirar urgência":"Marcar urgente"}</button><button class="act" data-needdel="${i}" style="margin-left:auto">Remover</button></div></div>`).join("")}
@@ -418,12 +481,12 @@ ${donsPanel(o.id)}
  <label style="display:flex;gap:8px;align-items:center;font-weight:600"><input type="checkbox" id="mCol" ${o.coleta?"checked":""}> Fazemos coleta no endereço do doador</label>
  <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" data-savedesc="${o.id}">Salvar dados</button><button class="btn ghost" data-go="mural">Publicar no mural</button><button class="btn ghost" data-go="chat">Atender doadores</button></div></div>`}
 function render(){pickView();MINE=allDon().filter(d=>d.u===meKey()).concat(LEG).sort((a,b)=>(a.ts||0)-(b.ts||0));const b=(pending()?`<div class="sample" role="status">Seu pedido de acesso como ${TIPON[myReq().tipo]||"perfil"} aguarda aprovação da equipe. Enquanto isso, você usa o app como doador.</div>`:"")+(state.offline?'<div class="sample" role="status">Banco de dados indisponível nesta visualização. O que você fizer aqui não será salvo.</div>':state.msg?`<div class="sample" role="status">${esc(state.msg)}</div>`:"");
- $("#view").innerHTML=b+(ready?onb()+({mural:vMural,doar:vDoar,ongs:vOngs,chat:vChat,inspecao:vInsp,impacto:vImp,minhaong:vMinha,equipe:vEquipe,conta:vConta})[state.view]():'<div class="panel muted">Carregando dados do IFOMME…</div>');renderNav();chatBottom()}
+ $("#view").innerHTML=b+(ready?onb()+({mural:vMural,doar:vDoar,ongs:vOngs,chat:vChat,inspecao:vInsp,impacto:vImp,minhaong:vMinha,equipe:vEquipe,conta:vConta,apoiar:vApoiar})[state.view]():'<div class="panel muted">Carregando dados do IFOMME…</div>');renderNav();chatBottom();gameTick()}
 function soft(){saveWiz();const a=document.activeElement,aid=a&&a.id,keep={};["cText","obs","cOng","cTipo","chatIn","mDesc","mHor","mPix","ni","nm","nc","repOng",...[...document.querySelectorAll("[id^=nt_]")].map(e=>e.id)].forEach(k=>{const e=document.getElementById(k);if(e)keep[k]=e.value});render();for(const k in keep){const e=document.getElementById(k);if(e&&keep[k])e.value=keep[k]}if(aid&&aid!=="q"){const e=document.getElementById(aid);e&&e.focus()}}
 function chatBottom(){const m=document.getElementById("msgs");if(m)m.scrollTop=m.scrollHeight}
 /* ---------- banco de dados ---------- */
 function W(p){return p.then(()=>true,e=>{toast(e&&e.code==="quota_exceeded"?"O banco de dados está cheio.":"Não foi possível salvar. Verifique sua permissão de acesso.");return false})}
-const arr=col=>col==="ongs"?ONGS:col==="posts"?POSTS:MINE;
+const arr=col=>col==="ongs"?ONGS:col==="posts"?POSTS:col==="campanhas"?CAMPS:MINE;
 const store={
  live(col){return !!db&&(col!=="me"||!!uid)},
  ref(col,id){return (col==="me"?db.collection("data/users/"+uid):db.collection(col)).doc(id)},
@@ -446,15 +509,18 @@ async function boot(){
  sub("p",db.collection("posts"),s=>{POSTS=s.docs.map(d=>({...d.data(),id:d.id})).sort((a,b)=>(b.ts||0)-(a.ts||0))},1);
  sub("pf",db.collection("perfis"),s=>{PERF=map(s);names()});
  sub("ap",db.collection("aprov"),s=>{APR=map(s)});
+ sub("cp",db.collection("campanhas"),s=>{CAMPS=s.docs.map(d=>({...d.data(),id:d.id}))});
  if(uid){
   sub("c",db.collection("chats"),s=>{CH=map(s);Object.keys(CH).forEach(k=>known.add(k));names()});
   sub("d",db.collection("doacoes"),s=>{MAPS={...MAPS,doacoes:map(s)};Object.keys(MAPS.doacoes).forEach(k=>known.add("doacoes/"+k));names()});
   sub("r",db.collection("receb"),s=>{MAPS={...MAPS,receb:map(s)};Object.keys(MAPS.receb).forEach(k=>known.add("receb/"+k))});
+  sub("l",db.collection("leads"),s=>{MAPS={...MAPS,leads:map(s)};Object.keys(MAPS.leads).forEach(k=>known.add("leads/"+k));names()});
   sub("me",db.collection("data/users/"+uid),s=>{LEG=[];s.docs.forEach(d=>{const v=d.data();if(d.id==="prefs"){likes=new Set(v.likes||[]);follows=new Set(v.follows||[]);myInd=new Set(v.indic||[]);rsvp=new Set(v.rsvp||[]);if(v.quem)state.quem=v.quem;state.local=v.local||""}else if(v.kind==="doacao")LEG.push({...v,id:d.id,u:uid,legacy:true})})});
  }
 }
 /* ---------- doações compartilhadas, avisos e não lidas ---------- */
-let MAPS={doacoes:{},receb:{}},LEG=[],myInd=new Set(),rsvp=new Set();
+let CAMPS=[];
+let MAPS={doacoes:{},receb:{},leads:{}},LEG=[],myInd=new Set(),rsvp=new Set();
 let SEEN={n:0,t:{}};try{const v=JSON.parse(localStorage.getItem("ifomme-seen")||"{}");SEEN={n:+v.n||0,t:v.t&&typeof v.t==="object"?v.t:{}}}catch(_){}
 const saveSeen=()=>{try{localStorage.setItem("ifomme-seen",JSON.stringify(SEEN))}catch(_){}};
 const MODO={coleta:"Coleta em casa",entrega:"Doador leva até a instituição",ponto:"Ponto de coleta"};
@@ -493,6 +559,92 @@ function exPanel(){const n=ONGS.filter(o=>o.exemplo).length+POSTS.filter(p=>p.ex
 function formLocal(){drawer(`<h2 style="font-size:22px">Onde você está?</h2><p class="muted" style="margin:0">Usamos o bairro para mostrar primeiro as instituições mais próximas de você.</p><form id="fLoc" style="display:flex;flex-direction:column;gap:12px"><div class="field"><label for="lb">Bairro</label><input class="inp" id="lb" value="${esc(state.local||"")}" placeholder="Ex.: Capão Redondo" maxlength="60"></div><button class="btn" type="submit">Salvar</button></form>`);
  $("#fLoc").addEventListener("submit",e=>{e.preventDefault();state.local=$("#lb").value.trim();savePrefs();closeLayer();toast(state.local?"Bairro salvo":"Bairro removido");render()})}
 
+/* ---------- jornada: níveis, XP e missões (tudo calculado de ações reais) ---------- */
+const LV=[[0,"Semente"],[50,"Broto"],[150,"Raiz"],[300,"Árvore"],[500,"Bosque"],[800,"Floresta"],[1200,"Lenda solidária"]];
+const MASC='<svg class="masc" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 57S8 43 8 25a13 13 0 0 1 24-7 13 13 0 0 1 24 7c0 18-24 32-24 32Z" fill="#E11D2E"/><circle cx="24" cy="28" r="3.2" fill="#fff"/><circle cx="40" cy="28" r="3.2" fill="#fff"/><path d="M24 36q8 8 16 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="34" r="3" fill="#FF9AA5" opacity=".65"/><circle cx="46.5" cy="34" r="3" fill="#FF9AA5" opacity=".65"/></svg>';
+function hasGame(){return navFor().includes("impacto")}
+function game(){const ongsN=new Set(MINE.map(d=>d.ong)).size,M=[
+ {id:"perfil",t:"Escolha seu perfil",w:"Doador, instituição ou inspetor: cada um vê as suas áreas.",xp:10,done:!!myReq()||isAdmin,a:'data-go="conta"'},
+ {id:"bairro",t:"Informe seu bairro",w:"Assim as instituições mais próximas aparecem primeiro.",xp:10,done:!!state.local,a:'data-open="local"'},
+ {id:"seguir",t:"Siga uma instituição",w:"As ações dela passam a aparecer no seu mural.",xp:15,done:follows.size>0,a:'data-go="ongs"'},
+ {id:"doar",t:"Faça sua primeira doação",w:"Em 4 passos o app encontra quem mais precisa do que você tem.",xp:30,done:MINE.length>0,a:'data-go="doar"'},
+ {id:"chat",t:"Converse com uma instituição",w:"Combine a coleta ou tire dúvidas direto pelo chat.",xp:15,done:threadList("me").length>0,a:'data-go="chat"'},
+ {id:"chegou",t:"Veja sua doação chegar",w:"A instituição confirma o recebimento e conta como usou.",xp:40,done:MINE.some(d=>d.etapa>=3),a:'data-go="impacto"'},
+ {id:"recomendar",t:"Recomende uma instituição",w:"Recomendações ajudam a equipe a priorizar as inspeções.",xp:20,done:myInd.size>0,a:'data-go="ongs"'},
+ {id:"evento",t:"Confirme presença em um evento",w:"Mutirões e ações aparecem no mural, no filtro Eventos.",xp:15,done:rsvp.size>0,a:'data-go="mural"'},
+ {id:"tres",t:"Doe para 3 instituições diferentes",w:"Espalhe a ajuda por causas diferentes.",xp:50,done:ongsN>=3,a:'data-go="doar"'}];
+ let xp=M.reduce((a,m)=>a+(m.done?m.xp:0),0);MINE.forEach(d=>{xp+=20+(d.etapa>=3?60:0)+(d.etapa>=4?20:0)});
+ let li=0;LV.forEach((l,i)=>{if(xp>=l[0])li=i});const cur=LV[li],nx=LV[li+1];
+ const ms=new Set(MINE.map(d=>{const t=new Date(d.ts||0);return t.getFullYear()*12+t.getMonth()})),now=new Date(),m0=now.getFullYear()*12+now.getMonth();let streak=0,k=ms.has(m0)?m0:m0-1;while(ms.has(k)){streak++;k--}
+ return {xp,lvl:li+1,name:cur[1],next:nx?nx[0]:null,nextName:nx?nx[1]:"",pct:nx?Math.round((xp-cur[0])/(nx[0]-cur[0])*100):100,missions:M,doneN:M.filter(m=>m.done).length,streak}}
+function hud(){const g=game();return `<button class="hud" type="button" data-go="impacto" aria-label="Nível ${g.lvl}, ${g.xp} XP. Abrir Minha jornada"><span class="lvb">${g.lvl}</span><span class="hx"><span>${esc(g.name)}</span><span class="bar"><i style="width:${g.pct}%"></i></span></span><span class="num">${g.xp} XP</span></button>`}
+function gameCard(){const g=game();return `<div class="panel gcard"><div class="lvb">${g.lvl}</div><div style="flex:1;min-width:200px"><div class="label">Nível ${g.lvl}</div><div class="gname">${esc(g.name)}</div><div class="bar xpb"><i style="width:${g.pct}%"></i></div><div class="muted" style="font-size:13.5px"><b class="num" style="color:var(--ink)">${g.xp} XP</b>${g.next!=null?` · faltam ${g.next-g.xp} XP para o nível ${g.lvl+1} (${esc(g.nextName)})`:" · nível máximo"}</div></div><div class="streak"><b class="num">${g.streak}</b><span>${g.streak===1?"mês seguido":"meses seguidos"}<br>doando</span></div></div>`}
+function missionsPanel(){const g=game();return `<div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h3 style="font-size:17px">Missões</h3><span class="pill p-neutral num">${g.doneN} de ${g.missions.length} concluídas</span></div>
+ ${g.missions.map((m,i)=>`<div class="mis ${m.done?"done":""}"><span class="mck">${m.done?"✓":i+1}</span><div><b>${m.t}</b><div class="muted" style="font-size:13px">${m.w}</div></div><span class="xpc">+${m.xp} XP</span>${m.done?"":`<button class="btn sm" ${m.a}>Ir</button>`}</div>`).join("")}
+ <p class="muted" style="margin:12px 0 0;font-size:12.5px">Como ganhar XP: 20 por doação registrada, mais 60 quando a instituição recebe e mais 20 com o relato. As missões dão bônus uma vez.</p></div>`}
+function missionBanner(){if(role()==="equipe")return `<div class="mban"><div style="flex:1;min-width:200px"><b>Você está vendo o app como Equipe.</b><div class="muted" style="font-size:13.5px">A jornada com níveis, XP e missões aparece para os doadores.</div></div><button class="btn sm" data-viewas="doador">Ver como doador</button></div>`;
+ if(!hasGame()||(!myReq()&&!isAdmin))return "";const g=game(),m=g.missions.find(x=>!x.done);
+ if(!m)return `<div class="mban">${MASC}<div style="flex:1;min-width:200px"><span class="label">Jornada completa</span><h2>Todas as missões concluídas!</h2><div class="muted" style="font-size:13.5px">Continue doando para subir de nível. Você está no nível ${g.lvl}: ${esc(g.name)}.</div></div><button class="btn" data-go="doar">Doar de novo</button></div>`;
+ return `<div class="mban">${MASC}<div style="flex:1;min-width:200px"><span class="label">Missão ${g.doneN+1} de ${g.missions.length}</span><h2>${m.t}</h2><div class="muted" style="font-size:13.5px">${m.w}</div></div><span class="xpc">+${m.xp} XP</span><button class="btn" ${m.a}>Começar</button></div>`}
+function communityCard(){const now=new Date(),n=allDon().filter(d=>d.etapa>=3&&d.ets&&new Date(d.ets).getMonth()===now.getMonth()&&new Date(d.ets).getFullYear()===now.getFullYear()).length,goal=[5,10,25,50,100,250,500,1000,5000].find(x=>x>n)||n;
+ return `<div class="panel"><h3>Meta da comunidade</h3><div style="font-size:13.5px"><b class="num" style="font-family:var(--display);font-size:22px">${n} de ${goal}</b><br>doações entregues este mês</div><div class="bar" style="margin:10px 0"><i style="width:${pct(n,goal)}%"></i></div><div class="muted" style="font-size:12.5px">Cada doação recebida por uma instituição conta para todo mundo.</div></div>`}
+function ongMissions(o){const M=[["Complete os dados da instituição",!!(o.desc&&o.horario)],["Cadastre uma necessidade com meta",o.needs.some(n=>n.m>1)],["Publique no mural",POSTS.some(p=>p.ong===o.id)],["Confirme uma doação",allDon().some(d=>d.ong===o.id&&d.etapa>=1)],["Responda a um doador",Object.keys(CH).some(r=>Object.keys((CH[r]||{}).replies||{}).some(k=>k.endsWith("|"+o.id)))],["Conquiste o selo de verificada",o.status==="verificado"]],n=M.filter(m=>m[1]).length;
+ return `<div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h3 style="font-size:17px">Missões da instituição</h3><span class="pill p-neutral num">${n} de ${M.length} concluídas</span></div><div class="bar" style="margin:10px 0 4px"><i style="width:${pct(n,M.length)}%"></i></div>${M.map((m,i)=>`<div class="mis ${m[1]?"done":""}"><span class="mck">${m[1]?"✓":i+1}</span><div><b>${m[0]}</b></div></div>`).join("")}</div>`}
+let GS=null;try{GS=JSON.parse(localStorage.getItem("ifomme-game")||"null")}catch(_){}
+const saveGS=()=>{try{localStorage.setItem("ifomme-game",JSON.stringify(GS))}catch(_){}};
+function confetti(){if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;let c=document.getElementById("fx");c&&c.remove();c=document.createElement("canvas");c.id="fx";c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);
+ const x=c.getContext("2d"),cols=["#CC4700","#FFC21A","#0B7A5E","#FF8A5C","#3A4FA0"],P=Array.from({length:90},()=>({x:innerWidth/2,y:innerHeight*.38,vx:(Math.random()-.5)*15,vy:-Math.random()*13-3,s:6+Math.random()*6,r:Math.random()*6,c:cols[Math.random()*5|0]})),t0=performance.now();
+ (function f(t){const k=(t-t0)/1700;x.clearRect(0,0,c.width,c.height);if(k>=1){c.remove();return}P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.42;p.r+=.2;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.globalAlpha=Math.max(0,1-k*k);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);x.restore()});requestAnimationFrame(f)})(t0)}
+function gameTick(){if(!ready||!hasGame())return;const g=game(),done=g.missions.filter(m=>m.done).map(m=>m.id);
+ if(!GS||GS.u!==meKey()){GS={u:meKey(),lvl:g.lvl,done};saveGS();return}
+ const fresh=done.filter(id=>!GS.done.includes(id)),up=g.lvl>GS.lvl;if(!fresh.length&&!up)return;
+ GS={u:meKey(),lvl:Math.max(g.lvl,GS.lvl),done:[...new Set([...GS.done,...done])]};saveGS();
+ if(up&&!$("#layer").innerHTML){$("#layer").innerHTML=`<div class="scrim mid" data-close><div class="lvlcard" role="dialog" aria-modal="true">${MASC}<div class="label">Você subiu de nível</div><div class="lvb" style="width:72px;height:72px;font-size:32px">${g.lvl}</div><h2 style="font-size:28px">${esc(g.name)}</h2><div class="muted">${g.xp} XP acumulados com ações reais.</div><button class="btn x" data-close>Continuar</button></div></div>`;confetti()}
+ else if(fresh.length){const m=g.missions.find(x=>x.id===fresh[0]);toast("Missão concluída: "+m.t+" · +"+m.xp+" XP");confetti()}}
+
+/* ---------- monetização: planos, apoio e campanhas (registra interesse, não cobra) ---------- */
+const brl=v=>"R$ "+Math.round(v).toLocaleString("pt-BR");
+const PLANOS=[["Essencial",149,["Coleta em dia e horário fixos","Comprovante de cada doação","1 instituição parceira verificada"]],["Profissional",299,["Tudo do Essencial","Relatório mensal de impacto","Instituição reserva para o excedente","Apoio ao pedido do Selo Doador de Alimentos"]],["Rede",499,["Tudo do Profissional","Painel para várias lojas","Voluntariado para a equipe","1 campanha com a marca por ano"]]];
+function allLeads(){const out=[];for(const u in MAPS.leads){const it=(MAPS.leads[u]||{}).items||{};for(const id in it){const l=it[id];if(l&&typeof l==="object")out.push({...l,id,u,plano:String(l.plano||""),valor:+l.valor||0,lojas:Math.max(1,+l.lojas||1),ts:+l.ts||0})}}return out.sort((a,b)=>b.ts-a.ts)}
+const campN=c=>allDon().filter(d=>d.cat===c.cat&&d.ts>=(+c.ts||0)).length;
+function campBanners(){return CAMPS.map(c=>`<button class="banner" data-catgo="${CATS.some(x=>x.k===c.cat)?c.cat:"alimentos"}" style="background:#2F2620"><i></i><i></i><small style="font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.85">Patrocinado por ${esc(c.patrocinador||"")}</small><b>${esc(c.titulo||"")}</b><span class="num">${campN(c)} de ${+c.meta||0} doações</span></button>`).join("")}
+function vApoiar(){const mine=allLeads().filter(l=>l.u===meKey());
+ return `<div class="head"><div><h1>Planos e apoio</h1><p>O IFOMME é gratuito para quem doa e para as instituições. Empresas, marcas e apoiadores mantêm a ponte funcionando.</p></div></div>
+ <div class="sample" role="note">Protótipo: os botões registram o seu interesse para a equipe entrar em contato. Nenhuma cobrança é feita.</div>
+ <h2 style="font-size:19px">Para empresas que doam excedentes</h2>
+ <div class="plans">${PLANOS.map((p,i)=>`<div class="panel plan ${i===1?"hot":""}"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3>${p[0]}</h3>${i===1?'<span class="xpc">Recomendado</span>':""}</div><div class="price"><b class="num">${brl(p[1])}</b><span>por loja, por mês</span></div><ul class="rules">${p[2].map(x=>`<li>${x}</li>`).join("")}</ul><button class="btn ${i===1?"":"ghost"}" data-lead="empresa|${p[0]}|${p[1]}">Quero este plano</button></div>`).join("")}</div>
+ <h2 style="font-size:19px">Para marcas e para pessoas</h2>
+ <div class="plans"><div class="panel plan"><h3>Campanha patrocinada</h3><div class="price"><b class="num">a partir de ${brl(5000)}</b><span>por campanha</span></div><ul class="rules"><li>Faixa da campanha no mural, com o nome da marca</li><li>Doação casada: a marca completa o que as pessoas doarem</li><li>Relatório final com o que foi entregue</li></ul><button class="btn ghost" data-lead="marca|Campanha patrocinada|5000">Quero patrocinar</button></div>
+ <div class="panel plan"><h3>Clube de apoiadores</h3><div class="muted" style="font-size:13.5px">Uma contribuição mensal de quem quer manter as inspeções e as coletas.</div><ul class="rules"><li>Relatório trimestral de como o dinheiro foi usado</li><li>Cancelamento a qualquer momento</li></ul><div class="chips" style="margin-top:auto">${[15,30,50].map(v=>`<button class="chip" data-lead="apoiador|Clube de apoiadores|${v}">${brl(v)} por mês</button>`).join("")}</div></div></div>
+ <p class="muted" style="margin:0;font-size:12.5px">Os valores são hipóteses em teste e podem mudar.</p>
+ ${mine.length?`<div class="panel"><h3 style="font-size:17px">Seus pedidos</h3>${mine.map(l=>`<div class="need"><div class="t"><b>${esc(l.plano)}${l.empresa?" · "+esc(l.empresa):""}</b><span class="pill p-warn">Recebido</span></div><div class="muted" style="font-size:13px">${brl(l.valor)}${l.tipo==="empresa"?" por loja · "+l.lojas+(l.lojas===1?" loja":" lojas"):l.tipo==="apoiador"?" por mês":""} · ${ago(l.ts)}</div></div>`).join("")}</div>`:""}`}
+function formLead(tp,pl,vl){drawer(`<h2 style="font-size:22px">${esc(tp==="empresa"?"Plano "+pl:pl)}</h2><p class="muted" style="margin:0">${brl(vl)}${tp==="empresa"?" por loja, por mês":tp==="apoiador"?" por mês":" (valor inicial)"}. A equipe IFOMME entra em contato para combinar os detalhes. Nenhuma cobrança é feita agora.</p>
+ <form id="fLead" style="display:flex;flex-direction:column;gap:12px">${tp!=="apoiador"?'<div class="field"><label for="le">Nome da empresa</label><input class="inp" id="le" required maxlength="80"></div>':""}${tp==="empresa"?'<div class="form"><div class="field"><label for="lc">CNPJ</label><input class="inp" id="lc" maxlength="20" placeholder="00.000.000/0001-00"></div><div class="field"><label for="ll">Número de lojas</label><input class="inp" id="ll" type="number" min="1" value="1"></div></div>':""}
+ <div class="field"><label for="lt">Contato (e-mail ou telefone)</label><input class="inp" id="lt" required maxlength="80"></div><button class="btn" type="submit">Enviar pedido</button></form>`);
+ $("#fLead").addEventListener("submit",e=>{e.preventDefault();const g=id=>{const x=document.getElementById(id);return x?x.value.trim():""};putMap("leads",meKey(),"items",newId(),{tipo:tp,plano:pl,valor:vl,lojas:Math.max(1,+g("ll")||1),empresa:g("le"),cnpj:g("lc"),contato:g("lt"),ts:Date.now()});closeLayer();toast("Pedido enviado. A equipe entra em contato.");render()})}
+function tipBox(w){const q=+w.q||0;return `<div class="field"><span class="label">Contribuição voluntária para manter o IFOMME</span><div class="chips">${[0,5,10].map(p=>`<button type="button" class="chip" data-tip="${p}" aria-pressed="${(w.tip||0)===p}">${p?p+"% ("+brl(q*p/100)+")":"Não agora"}</button>`).join("")}</div><span class="muted" style="font-size:12.5px">Opcional. Não reduz o valor que vai para a instituição. Neste protótipo nada é cobrado.</span></div>`}
+function revPanel(){const L=allLeads(),emp=L.filter(l=>l.tipo==="empresa"),apo=L.filter(l=>l.tipo==="apoiador"),mar=L.filter(l=>l.tipo==="marca"),mE=emp.reduce((a,l)=>a+l.valor*l.lojas,0),mA=apo.reduce((a,l)=>a+l.valor,0),tips=allDon().reduce((a,d)=>a+(+d.tip||0),0),cv=mar.reduce((a,l)=>a+l.valor,0),none='<p class="muted" style="margin:12px 0 0;font-size:13.5px">Aparece quando houver pedidos em Planos e apoio.</p>';
+ return `<div class="panel"><h3 style="font-size:17px">Receita: intenções registradas</h3><p class="muted" style="margin:4px 0 12px;font-size:13px">Soma dos pedidos feitos em Planos e apoio. Nada foi cobrado: são contatos para a equipe fechar.</p>
+ <div class="stats"><div class="stat"><span class="label">Receita mensal potencial</span><div class="big num">${brl(mE+mA)}</div></div><div class="stat"><span class="label">Campanhas pedidas</span><div class="big num">${brl(cv)}</div></div><div class="stat"><span class="label">Contribuições voluntárias</span><div class="big num">${brl(tips)}</div></div></div>
+ <div class="charts"><div><span class="label">Receita mensal potencial por fonte</span>${mE+mA?hbars([{l:"Empresas",v:mE},{l:"Apoiadores",v:mA}],null,brl):none}</div><div><span class="label">Pedidos por tipo</span>${L.length?hbars([{l:"Empresas",v:emp.length},{l:"Marcas",v:mar.length},{l:"Apoiadores",v:apo.length}],"var(--ok)"):none}</div></div>
+ ${L.length?`<h3 style="font-size:16px;margin-top:18px">Pedidos</h3>${L.map(l=>`<div class="need"><div class="t"><b>${esc(l.empresa||pname(l.u))} · ${esc(l.plano)}</b><span class="num">${brl(l.valor*(l.tipo==="empresa"?l.lojas:1))}</span></div><div class="muted" style="font-size:13px">${esc(l.contato||"")}${l.cnpj?" · CNPJ "+esc(l.cnpj):""}${l.tipo==="empresa"?" · "+l.lojas+(l.lojas===1?" loja":" lojas"):""} · ${ago(l.ts)}</div></div>`).join("")}`:""}
+ <h3 style="font-size:16px;margin-top:18px">Campanhas patrocinadas no mural</h3>${CAMPS.map(c=>`<div class="need"><div class="t"><b>${esc(c.titulo||"")}</b><button class="act" data-campdel="${c.id}">Encerrar</button></div><div class="muted" style="font-size:13px">Patrocinada por ${esc(c.patrocinador||"")} · ${campN(c)} de ${+c.meta||0} doações</div></div>`).join("")||'<p class="muted" style="margin:6px 0 0;font-size:13.5px">Nenhuma campanha ativa.</p>'}
+ <form id="fCamp" class="form" style="align-items:end;margin-top:14px"><div class="field"><label for="ct">Título da campanha</label><input class="inp" id="ct" required maxlength="40" placeholder="Ex.: Inverno sem frio"></div><div class="field"><label for="cs">Patrocinador</label><input class="inp" id="cs" required maxlength="40"></div><div class="field"><label for="cc">Categoria</label><select id="cc">${CATS.map(c=>`<option value="${c.k}">${c.n}</option>`).join("")}</select></div><div class="field"><label for="cm">Meta de doações</label><input class="inp" id="cm" type="number" min="1" required placeholder="100"></div><button class="btn" type="submit">Publicar campanha</button></form></div>`}
+
+/* ---------- gráficos ---------- */
+function hbars(rows,color,fmt){const mx=Math.max(1,...rows.map(r=>r.v));return `<div class="hb">${rows.map(r=>`<div class="hbr" ${fmt?'style="grid-template-columns:minmax(84px,140px) 1fr 92px"':""}><span class="hbl">${esc(r.l)}</span><div class="hbt"><i style="width:${r.v/mx*100}%;background:${color||"var(--brand)"}"></i></div><span class="hbv num">${fmt?fmt(r.v):r.v}</span></div>`).join("")}</div>`}
+function colsChart(rows){const mx=Math.max(1,...rows.map(r=>r.v));return `<div class="cb">${rows.map(r=>{const h=r.v?Math.max(4,r.v/mx*84):0;return `<div class="cbc"><div class="cbw"><i style="height:${h}%"></i><span class="num" style="bottom:calc(${h}% + 4px)">${r.v||""}</span></div><small>${esc(r.l)}</small></div>`}).join("")}</div>`}
+function byMonth(list){const now=new Date(),out=[];for(let i=5;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);out.push({l:["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"][d.getMonth()],v:list.filter(x=>{const t=new Date(x.ts||0);return t.getFullYear()===d.getFullYear()&&t.getMonth()===d.getMonth()}).length})}return out}
+function byCat(list){return CATS.map(c=>({l:c.n,v:list.filter(d=>d.cat===c.k).length})).filter(r=>r.v).sort((a,b)=>b.v-a.v)}
+const noData='<p class="muted" style="margin:12px 0 0;font-size:13.5px">O gráfico aparece quando houver doações registradas.</p>';
+function dash(){const all=allDon().filter(d=>byId(d.ong).id),st=[["verificado","Verificadas"],["inspecao","Em inspeção"],["pendente","Aguardando inspeção"]].map(([k,l])=>({l,v:ONGS.filter(o=>o.status===k).length}));
+ return `<div class="panel"><h3 style="font-size:17px">Painel do ecossistema</h3><div class="charts">
+  <div><span class="label">Doações por mês</span>${all.length?colsChart(byMonth(all)):noData}</div>
+  <div><span class="label">Doações por etapa</span>${all.length?hbars(ETAPAS.map((e,i)=>({l:e,v:all.filter(d=>d.etapa===i).length}))):noData}</div>
+  <div><span class="label">Doações por categoria</span>${all.length?hbars(byCat(all)):noData}</div>
+  <div><span class="label">Instituições por situação</span>${hbars(st,"var(--ok)")}</div></div></div>`}
+function myCharts(){if(!MINE.length)return "";return `<div class="panel"><h3 style="font-size:17px">Sua trajetória</h3><div class="charts"><div><span class="label">Doações por mês</span>${colsChart(byMonth(MINE))}</div><div><span class="label">O que você doou</span>${hbars(byCat(MINE))}</div></div></div>`}
+
 /* ---------- MURAL ---------- */
 function vMural(){
   const q=state.q.toLowerCase();
@@ -501,12 +653,12 @@ function vMural(){
   const urg=ONGS.flatMap(o=>o.needs.filter(n=>n.urg).map(n=>({o,n}))).sort((a,b)=>near(a.o,b.o));
   const tot=MINE.length;
   const perto=ONGS.slice().sort(near),rl=role(),canPost=rl==="ong"||rl==="equipe",postOngs=rl==="ong"?ONGS.filter(o=>o.id===myOng()):ONGS;
-  return `<button class="addr" type="button" data-open="local"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>${state.local?`Doando a partir de <b>${esc(state.local)}</b>`:"<b>Informe seu bairro</b> para ver quem está perto"} ▾</button>
+  return `${missionBanner()}<button class="addr" type="button" data-open="local"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>${state.local?`Doando a partir de <b>${esc(state.local)}</b>`:"<b>Informe seu bairro</b> para ver quem está perto"} ▾</button>
   <div class="rowscroll" aria-label="Categorias de doação">${CATS.map(c=>`<button class="circ" type="button" data-catgo="${c.k}"><span class="c">${svg(c.i)}</span>${c.n.split(" ")[0]}</button>`).join("")}</div>
-  <div class="rowscroll" aria-label="Campanhas">
-   <button class="banner" data-catgo="roupas" style="background:#E5132E"><i></i><i></i><b>Doe agasalhos</b><span>Cobertores e roupas de frio em bom estado para quem mais precisa.</span></button>
-   <button class="banner" data-catgo="alimentos" style="background:#6E2BB8"><i></i><i></i><b>Alimento não é lixo</b><span>Doe excedentes dentro da validade, com segurança jurídica.</span></button>
-   <button class="banner" data-catgo="voluntariado" style="background:#0B8A7A"><i></i><i></i><b>Doe 2 horas</b><span>Seja voluntário em uma instituição perto de você.</span></button>
+  <div class="rowscroll" aria-label="Campanhas">${campBanners()}
+   <button class="banner" data-catgo="roupas" style="background:var(--brand);color:var(--brand-ink)"><i></i><i></i><b>Doe agasalhos</b><span>Cobertores e roupas de frio em bom estado para quem mais precisa.</span></button>
+   <button class="banner" data-catgo="alimentos" style="background:#0B6B54"><i></i><i></i><b>Alimento não é lixo</b><span>Doe excedentes dentro da validade, com segurança jurídica.</span></button>
+   <button class="banner" data-catgo="voluntariado" style="background:#3A4FA0"><i></i><i></i><b>Doe 2 horas</b><span>Seja voluntário em uma instituição perto de você.</span></button>
   </div>
   <div class="sec"><h2>ONGs perto de você</h2><button data-go="ongs">Ver todas</button></div>
   <div class="lojas">${perto.slice(0,6).map(loja).join("")||'<div class="panel muted">Nenhuma ONG cadastrada ainda. Cadastre a primeira na aba ONGs e ela aparece aqui.</div>'}</div>
@@ -522,7 +674,7 @@ function vMural(){
   </div>
   <aside class="side">
    ${impCard()}
-   <div class="panel"><h3>Urgente perto de você</h3>${urg.map(({o,n})=>`<div class="need"><div class="t"><b>${esc(n.i)}</b><span class="muted num">${dist(o)}</span></div><div class="bar urg"><i style="width:${pct(n.q,n.m)}%"></i></div><div class="t"><span class="muted">${esc(o.nome)}</span><button class="act" data-quick="${o.id}|${n.c}" style="padding:2px 6px">Doar</button></div></div>`).join("")}</div>
+   ${communityCard()}<div class="panel"><h3>Urgente perto de você</h3>${urg.map(({o,n})=>`<div class="need"><div class="t"><b>${esc(n.i)}</b><span class="muted num">${dist(o)}</span></div><div class="bar urg"><i style="width:${pct(n.q,n.m)}%"></i></div><div class="t"><span class="muted">${esc(o.nome)}</span><button class="act" data-quick="${o.id}|${n.c}" style="padding:2px 6px">Doar</button></div></div>`).join("")}</div>
   </aside></div>`;
 }
 function loja(o){const urg=o.needs.some(n=>n.urg),bits=[o.status==="verificado"?`<span class="free">✓ Inspeção ${inspScore(o.id)||o.nota}/100</span>`:o.status==="inspecao"?"Em inspeção":"Aguardando inspeção",o.coleta?"Faz coleta":"",urg?'<span style="color:var(--brand);font-weight:700">Precisa urgente</span>':""].filter(Boolean);
@@ -621,7 +773,7 @@ function vOngs(){
 /* ---------- CONVERSAS ---------- */
 let CH={},isAdmin=false,U=null,NAMES={},known=new Set(),wq={};
 const meKey=()=>uid||"local";
-function names(){if(!U||!U.profiles)return;const ids=[...new Set([...Object.keys(CH),...Object.keys(PERF),...Object.keys(MAPS.doacoes)])].filter(k=>k!=="local"&&!(k in NAMES));if(!ids.length)return;ids.forEach(k=>NAMES[k]="");Promise.resolve(U.profiles(ids)).then(ps=>{ids.forEach(k=>NAMES[k]=(ps&&ps[k]&&ps[k].name)||"");if(["chat","equipe","minhaong"].includes(state.view))soft()},()=>{})}
+function names(){if(!U||!U.profiles)return;const ids=[...new Set([...Object.keys(CH),...Object.keys(PERF),...Object.keys(MAPS.doacoes),...Object.keys(MAPS.leads)])].filter(k=>k!=="local"&&!(k in NAMES));if(!ids.length)return;ids.forEach(k=>NAMES[k]="");Promise.resolve(U.profiles(ids)).then(ps=>{ids.forEach(k=>NAMES[k]=(ps&&ps[k]&&ps[k].name)||"");if(["chat","equipe","minhaong"].includes(state.view))soft()},()=>{})}
 const pname=u=>u===meKey()?"Você":(NAMES[u]||"Doador");
 function okRep(r,ong){if(r===meKey())return true;const a=APR[r];return !!a&&(a.tipo==="equipe"||(a.tipo==="ong"&&a.ong===ong))}
 function getThread(u,ong){const base=((((CH[u]||{}).threads||{})[ong]||{}).msgs),out=(Array.isArray(base)?base:[]).map(m=>({f:"u",t:String(m.t||""),ts:+m.ts||0})),k=u+"|"+ong;
@@ -681,8 +833,9 @@ function vInsp(){
 function vImp(){
   const pess=MINE.reduce((s,d)=>s+impacto(d),0),ongsN=new Set(MINE.map(d=>d.ong)).size;
   const B=[["1ª","Primeira ponte","1 doação",MINE.length>=1],["5×","Doador frequente","5 doações",MINE.length>=5],["3","Rede do bem","3 ONGs diferentes",ongsN>=3],["★","Embaixador","Indicou uma ONG que foi verificada",[...myInd].some(i=>byId(i).status==="verificado")]];
-  return `<div class="head"><div><h1>Meu impacto</h1><p>A instituição confirma cada etapa, do registro até o relato de como a doação foi usada.</p></div><button class="btn accent" data-go="doar">${svg("gift")}Nova doação</button></div>
-  <div class="stats"><div class="stat"><span class="label">Doações</span><div class="big num">${MINE.length}</div></div><div class="stat"><span class="label">Pessoas (estimativa)</span><div class="big num">≈ ${pess}</div></div><div class="stat"><span class="label">ONGs apoiadas</span><div class="big num">${ongsN}</div></div><div class="stat"><span class="label">ONGs que sigo</span><div class="big num">${follows.size}</div></div></div>
+  return `<div class="head"><div><h1>Minha jornada</h1><p>A instituição confirma cada etapa, do registro até o relato de como a doação foi usada.</p></div><button class="btn accent" data-go="doar">${svg("gift")}Nova doação</button></div>
+  ${gameCard()}${missionsPanel()}<div class="stats"><div class="stat"><span class="label">Doações</span><div class="big num">${MINE.length}</div></div><div class="stat"><span class="label">Pessoas (estimativa)</span><div class="big num">≈ ${pess}</div></div><div class="stat"><span class="label">ONGs apoiadas</span><div class="big num">${ongsN}</div></div><div class="stat"><span class="label">ONGs que sigo</span><div class="big num">${follows.size}</div></div></div>
+  ${myCharts()}
   <div class="panel"><h3 style="font-size:17px;margin-bottom:6px">Rastreio das doações</h3><div class="track">${MINE.slice().reverse().map(d=>{const o=byId(d.ong);return `<div style="padding:12px 0;border-bottom:1px solid var(--line)"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><b>${esc(d.desc)}</b><span class="muted" style="font-size:13px">${esc(o.nome)} · ${d.data}</span></div><div class="tl">${ETAPAS.map((e,i)=>`<div class="s ${i<d.etapa?"done":i===d.etapa?"cur":""}">${e}</div>`).join("")}</div>${d.cat==="alimentos"&&d.etapa>=3?`<div class="sample" style="margin-top:8px">Entrega feita: a responsabilidade do doador terminou aqui (Lei 14.016/2020).</div>`:""}${d.etapa>=4&&d.nota?`<div class="sample" style="margin-top:8px">Relato da instituição: ${esc(d.nota)}</div>`:""}${d.etapa<3&&!d.legacy&&byId(d.ong).id?`<button class="act" data-chat="${d.ong}" style="margin-top:8px">Falar com a instituição</button>`:""}</div>`}).join("")||'<p class="muted" style="margin:6px 0 0">Você ainda não registrou doações. Elas aparecem aqui assim que você confirmar a primeira.</p>'}</div></div>
   <div class="panel"><h3 style="font-size:17px;margin-bottom:12px">Conquistas</h3><div class="badges">${B.map(b=>`<div class="badge ${b[3]?"got":""}"><i>${b[0]}</i><div><b>${b[1]}</b><div class="muted" style="font-size:12px">${b[2]}</div></div></div>`).join("")}</div></div>`;
 }
@@ -708,17 +861,18 @@ function formIndicar(cad){drawer(`<h2 style="font-size:22px">${cad?"Cadastrar mi
   if(!cad){myInd.add(id);savePrefs()}
   if(cad&&!isAdmin){closeLayer();setPerfil("ong",id);return}
   closeLayer();toast(cad?"Cadastro enviado. Ele já está na fila de inspeção.":"Indicação enviada. Obrigado por ampliar a rede!");state.sel=id;render()})}
-function confirmar(id){const o=byId(id),w=state.wiz,c=CATS.find(x=>x.k===w.cat);
+function confirmar(id){const o=byId(id),w=state.wiz,c=CATS.find(x=>x.k===w.cat);w.pick=id;
  drawer(`<h2 style="font-size:22px">Confirmar doação</h2><div class="panel" style="background:var(--sunk);border:0"><div class="label">Você vai doar</div><b style="font-size:17px">${esc(w.desc||(w.q+" "+c.u+" de "+c.n.toLowerCase()))}</b><div class="label" style="margin-top:12px">Para</div><b>${esc(o.nome)}</b> ${status(o)}<div class="label" style="margin-top:12px">Entrega</div><b>${({coleta:"Coleta em casa",entrega:"Eu levo até a ONG",ponto:"Ponto de coleta"})[w.modo]}</b>${w.cat==="alimentos"?`<div class="label" style="margin-top:12px">Doador e validade</div><b>${esc(w.quem||"Pessoa física")} · ${esc((w.val||"").split("-").reverse().join("/"))}</b>`:""}</div>${w.cat==="alimentos"?TERMO:""}
  ${w.cat==="dinheiro"?(o.pix?`<div class="field"><label for="pix">Chave PIX informada pela instituição</label><div style="display:flex;gap:8px"><input class="inp" id="pix" readonly value="${esc(o.pix)}" style="flex:1;min-width:0"><button class="btn sm ghost" id="cp" type="button">Copiar</button></div><span class="muted" style="font-size:12.5px">Confira o nome do favorecido no seu banco antes de pagar. O IFOMME não processa pagamentos.</span></div>`:`<div class="legal"><b>Chave PIX não cadastrada</b><span>Esta instituição ainda não informou uma chave PIX. Registre a intenção de doar e combine o pagamento pelo chat.</span></div>`):""}
- <p class="muted" style="margin:0;font-size:13px">A instituição confirma cada etapa e você acompanha tudo em Meu impacto.</p><button class="btn" id="ok">Confirmar doação</button>`);
+ ${w.cat==="dinheiro"?tipBox(w):""}
+ <p class="muted" style="margin:0;font-size:13px">A instituição confirma cada etapa e você acompanha tudo em Minha jornada.</p><button class="btn" id="ok">Confirmar doação</button>`);
  const cp=$("#cp");cp&&cp.addEventListener("click",()=>{navigator.clipboard.writeText($("#pix").value).then(()=>toast("Chave PIX copiada"),()=>{$("#pix").select();toast("Selecione e copie a chave")})});
- $("#ok").addEventListener("click",()=>{const q=+w.q||1;putMap("doacoes",meKey(),"items",newId(),{...(w.cat==="alimentos"?{quem:w.quem||"Pessoa física",atipo:w.atipo||"indust",val:w.val||null,decl:true,declTs:Date.now()}:{}),kind:"doacao",ong:o.id,cat:w.cat,q,desc:w.desc||(q+" "+c.u+" de "+c.n.toLowerCase()),modo:w.modo,etapa:0,ts:Date.now(),data:new Date().toLocaleDateString("pt-BR",{day:"2-digit",month:"short"})});
-  state.wiz={step:1,cat:null,q:"",desc:"",modo:"coleta",cep:""};closeLayer();toast("Doação registrada! Acompanhe em Meu impacto.");go("impacto")})}
+ $("#ok").addEventListener("click",()=>{const q=+w.q||1;putMap("doacoes",meKey(),"items",newId(),{...(w.cat==="alimentos"?{quem:w.quem||"Pessoa física",atipo:w.atipo||"indust",val:w.val||null,decl:true,declTs:Date.now()}:{}),kind:"doacao",tip:w.cat==="dinheiro"?Math.round(q*(w.tip||0)/100):0,ong:o.id,cat:w.cat,q,desc:w.desc||(q+" "+c.u+" de "+c.n.toLowerCase()),modo:w.modo,etapa:0,ts:Date.now(),data:new Date().toLocaleDateString("pt-BR",{day:"2-digit",month:"short"})});
+  state.wiz={step:1,cat:null,q:"",desc:"",modo:"coleta",cep:""};closeLayer();toast("Doação registrada! Acompanhe em Minha jornada.");confetti();go("impacto")})}
 
 /* ---------- events ---------- */
 document.addEventListener("click",e=>{
- const t=e.target.closest("[data-go],[data-f],[data-like],[data-share],[data-rsvp],[data-quick],[data-catgo],[data-cat],[data-chat],[data-thread],[data-step],[data-talk],[data-delpost],[data-purge],[data-recom],[data-docok],[data-ev],[data-setrole],[data-viewas],[data-apr],[data-rev],[data-needurg],[data-needdel],[data-savedesc],[data-cmode],[data-cback],[data-qmsg],[data-modo],[data-wiz],[data-pick],[data-causa],[data-ong],[data-follow],[data-open],[data-sel],[data-approve],[data-pend],[data-adv],[data-close]");
+ const t=e.target.closest("[data-go],[data-f],[data-like],[data-share],[data-rsvp],[data-quick],[data-catgo],[data-cat],[data-lead],[data-campdel],[data-tip],[data-chat],[data-thread],[data-step],[data-talk],[data-delpost],[data-purge],[data-recom],[data-docok],[data-ev],[data-setrole],[data-viewas],[data-apr],[data-rev],[data-needurg],[data-needdel],[data-savedesc],[data-cmode],[data-cback],[data-qmsg],[data-modo],[data-wiz],[data-pick],[data-causa],[data-ong],[data-follow],[data-open],[data-sel],[data-approve],[data-pend],[data-adv],[data-close]");
  if(!t)return;const d=t.dataset;
  if(d.close!==undefined){if(e.target===t||t.classList.contains("x"))closeLayer();return}
  if(d.go){e.preventDefault();closeLayer();go(d.go)}
@@ -736,6 +890,9 @@ document.addEventListener("click",e=>{
  else if(d.ong){e.preventDefault();perfil(d.ong)}
  else if(d.follow){const id=d.follow;follows.has(id)?follows.delete(id):follows.add(id);savePrefs();toast(follows.has(id)?"Você vai ver as ações dessa ONG no mural":"Você deixou de seguir");closeLayer();render()}
  else if(d.open)d.open==="rep"?formRep():d.open==="regras"?formRegras():d.open==="local"?formLocal():formIndicar(d.open==="cadastrar")
+ else if(d.lead){const a=d.lead.split("|");formLead(a[0],a[1],+a[2])}
+ else if(d.campdel){store.del("campanhas",d.campdel);toast("Campanha encerrada");render()}
+ else if(d.tip){state.wiz.tip=+d.tip;confirmar(state.wiz.pick)}
  else if(d.step){const i=d.step.indexOf("|");stepDon(d.step.slice(0,i),d.step.slice(i+1))}
  else if(d.talk){const i=d.talk.indexOf("|");state.chat={mode:"ong",u:d.talk.slice(0,i),ong:d.talk.slice(i+1)};go("chat")}
  else if(d.delpost){if(state.delPost!==d.delpost){state.delPost=d.delpost;render()}else{state.delPost=null;store.del("posts",d.delpost);toast("Publicação excluída");render()}}
@@ -766,7 +923,8 @@ document.addEventListener("change",e=>{
  if(e.target.id==="obs"){const o=byId(state.sel);if(o.id){store.update("ongs",o.id,{inspObs:e.target.value.slice(0,1000),inspTs:Date.now()});toast("Observações salvas")}}
  if(e.target.dataset.needset){const i=+e.target.dataset.needset,v=Math.max(0,+e.target.value||0);updNeeds(byId(myOng()),n=>{n[i].q=Math.min(n[i].m,v)});toast("Quantidade atualizada")}
 });
-document.addEventListener("submit",e=>{if(e.target.id==="fNeed"){e.preventDefault();const i=$("#ni").value.trim(),m=Math.max(1,+$("#nm").value||1),c=$("#nc").value;if(!i)return;$("#ni").value="";$("#nm").value="";updNeeds(byId(myOng()),n=>{n.push({i:i.slice(0,80),c,q:0,m})});toast("Necessidade adicionada");return}
+document.addEventListener("submit",e=>{if(e.target.id==="fCamp"){e.preventDefault();const t=$("#ct").value.trim(),sp=$("#cs").value.trim();if(!t||!sp)return;store.set("campanhas",newId(),{titulo:t.slice(0,40),patrocinador:sp.slice(0,40),cat:$("#cc").value,meta:Math.max(1,+$("#cm").value||1),ts:Date.now()});toast("Campanha publicada no mural");render();return}
+ if(e.target.id==="fNeed"){e.preventDefault();const i=$("#ni").value.trim(),m=Math.max(1,+$("#nm").value||1),c=$("#nc").value;if(!i)return;$("#ni").value="";$("#nm").value="";updNeeds(byId(myOng()),n=>{n.push({i:i.slice(0,80),c,q:0,m})});toast("Necessidade adicionada");return}
  if(e.target.id!=="chatF")return;e.preventDefault();const i=$("#chatIn"),t=i.value.trim(),c=state.chat;if(!t||!c||!c.ong)return;sendMsg(c.u,c.ong,c.mode==="ong"?"o":"u",t);i.value="";render();const n=$("#chatIn");n&&n.focus()});
 function saveWiz(){const w=state.wiz;if($("#wq"))w.q=$("#wq").value;if($("#wd"))w.desc=$("#wd").value;if($("#wcep"))w.cep=$("#wcep").value;if($("#wquem")){w.quem=$("#wquem").value;w.atipo=$("#watipo").value;w.val=$("#wval").value;w.decl=DECL.map((_,i)=>$("#wd"+i).checked)}}
 document.addEventListener("click",e=>{if(e.target.id==="cPub"){const t=$("#cText").value.trim();if(!t){toast("Escreva algo antes de publicar");return}if(!$("#cOng").value){toast("Cadastre uma ONG antes de publicar");return}store.set("posts",newId(),{ong:$("#cOng").value,tipo:$("#cTipo").value,t,ts:Date.now(),ap:0});$("#cText").value="";if(!store.live("posts"))POSTS.sort((a,b)=>(b.ts||0)-(a.ts||0));toast("Publicado no mural");render()}});

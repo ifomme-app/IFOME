@@ -40,7 +40,22 @@ create table if not exists chats (
   updated_at  integer not null default (unixepoch()*1000)
 );
 
+create table if not exists campanhas (
+  id          text primary key,
+  data        text not null default '{}',
+  updated_at  integer not null default (unixepoch()*1000)
+);
+
 create table if not exists doacoes (
+  id          text primary key,
+  data        text not null default '{}',
+  updated_at  integer not null default (unixepoch()*1000)
+);
+
+-- Pedidos de proposta comercial: empresa, CNPJ e contato. O id do documento
+-- é o identificador de quem pediu, e a API só devolve a linha de quem está
+-- pedindo. Isto não é uma coleção aberta como o mural.
+create table if not exists leads (
   id          text primary key,
   data        text not null default '{}',
   updated_at  integer not null default (unixepoch()*1000)
@@ -68,5 +83,6 @@ create table if not exists admins (
   criado_em   integer not null default (unixepoch()*1000)
 );
 
-create index if not exists ongs_atualizado  on ongs  (updated_at desc);
-create index if not exists posts_atualizado on posts (updated_at desc);
+create index if not exists ongs_atualizado      on ongs      (updated_at desc);
+create index if not exists posts_atualizado     on posts     (updated_at desc);
+create index if not exists campanhas_atualizado on campanhas (updated_at desc);
