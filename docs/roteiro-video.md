@@ -1,102 +1,137 @@
-# Roteiros dos vídeos
+# Roteiro do vídeo
 
-São **dois vídeos diferentes**. Não dá para usar o mesmo nos dois lugares.
+**Um vídeo só, de até 3 minutos.** O mesmo link serve para o painel de créditos e
+para o formulário de submissão.
 
-| | Painel de créditos | Submissão final |
+Divisão combinada:
+
+| Trecho | Quem | O que |
 |---|---|---|
-| Prazo | o quanto antes, libera os créditos | 30/11 às 23h59 |
-| Duração | cerca de 3 min | até 3 min |
-| Exigência | **cada integrante aparece na câmera** | mostrar o **produto funcionando** |
-| Foco | a ideia e quem são vocês | a demonstração |
+| 0:00 a 1:00 | Diego | apresentação na câmera: problema, solução, time, trilha |
+| 1:00 a 2:50 | Alexandre | gravação de tela do app funcionando, com narração |
+| 2:50 a 3:00 | Diego | fechamento, link do app e do repositório |
+
+O painel de créditos pede que cada integrante apareça. Se for o caso, o terceiro
+integrante grava 15 segundos de rosto antes da demonstração, dizendo nome, cidade
+e o que fez no projeto.
+
+Nada de slide e nada de foto de tela. Uma das quatro notas é o produto
+funcionando, então a parte da tela é gravação real do site no ar.
 
 ---
 
-# Vídeo 1: painel de créditos
+# A demonstração de tela (a parte do Alexandre)
 
-Cada um fala cerca de 50 segundos, de rosto, podendo ser gravado separado e juntado depois. Celular resolve. Pode ser não listado no YouTube.
+Site: `https://ifomme.pages.dev`. Não tem tela de login, abre direto, que é o que
+o regulamento exige.
 
-## Pessoa 1 — o problema (0:00 a 0:50)
+Antes de gravar, abra o app uma vez e confira que o mural carregou as seis
+instituições. Elas vêm do banco, não do código.
 
-> Oi, eu sou o [nome], do time IFOMME.
+Grave a tela primeiro e a voz depois, por cima. Fica mais limpo e dá para errar
+sem perder a tomada.
+
+## Tomada 1, 0:00 a 0:12 — o mural
+
+Tela: a página inicial, rolando devagar o mural.
+
+> Este é o IFOMME, no ar. O que aparece aqui não é tela de exemplo: são
+> instituições cadastradas no banco, publicando o que precisam hoje, com
+> urgência e prazo.
+
+## Tomada 2, 0:12 a 0:25 — as instituições
+
+Tela: aba Instituições. Passe por duas ou três, mostrando o selo e a nota.
+
+> Cada instituição tem bairro, distância, nota e selo de verificação. Quem não
+> passou pela inspeção aparece como pendente, e isso fica visível ao lado do
+> nome. O doador vê com quem está falando.
+
+## Tomada 3, 0:25 a 0:45 — começar a doação
+
+Tela: aba Doar. Passo 1, as sete categorias. Escolha Alimentos. Passo 2 carrega.
+
+> A doação tem quatro passos. No primeiro, o que você tem para doar: não é só
+> alimento. Tem roupa, material escolar, higiene, móveis, horas de voluntariado
+> e dinheiro.
 >
-> Todo dia sobra comida boa em mercado, padaria e restaurante, e essa comida vai para o lixo. Ao mesmo tempo, milhões de pessoas no Brasil vivem em insegurança alimentar.
->
-> O que a gente descobriu é que o problema não é falta de vontade de doar. São três travas. A primeira: quem quer doar não sabe para quem. A segunda: tem medo de responder por um problema sanitário. E a terceira, que é a que mais mata doação, é a parte chata de combinar coleta, entrega e horário.
->
-> E do outro lado tem a instituição, que não tem como avisar que hoje ela precisa de fralda, e não de arroz.
+> Escolhendo alimento, o app abre as regras antes de qualquer coisa: o que pode
+> doar, o que não pode, e a declaração obrigatória do doador. Isso resolve a
+> trava que mais mata doação, que é o medo de responder por um problema
+> sanitário. Pela Lei 15.224 de 2025, a responsabilidade do doador termina na
+> primeira entrega.
 
-## Pessoa 2 — a solução (0:50 a 1:45)
+Enquanto fala, preencha: quantidade, tipo de alimento, validade e as caixas da
+declaração.
 
-> Eu sou o [nome]. O IFOMME resolve as três travas no mesmo lugar.
+## Tomada 4, 0:45 a 0:57 — como entregar
+
+Tela: passo 3, coleta em casa ou entrega no local.
+
+> No terceiro passo, a logística. Ou um voluntário busca, ou o doador entrega.
+> Essa escolha entra na conta do passo seguinte.
+
+## Tomada 5, 0:57 a 1:25 — o casamento entre oferta e necessidade
+
+Esta é a tomada mais importante do vídeo. Ensaie antes. Passe o mouse devagar
+pela lista, parando na primeira, a Melhor ponte.
+
+Tela: passo 4, a lista de instituições ordenada por nota de compatibilidade.
+
+> Aqui está o coração do projeto, e é por isso que a gente concorre na trilha de
+> logística e automação. O app não devolve uma lista alfabética. Ele dá nota a
+> cada instituição para esta doação específica.
 >
-> A instituição publica o que precisa, quanto, com que urgência e em que horário recebe. O doador busca por bairro e acha quem está perto, não uma lista nacional genérica.
+> Pesa quatro coisas: se a instituição pediu exatamente essa categoria, se o
+> pedido está marcado como urgente, a distância até o doador, e o selo de
+> verificação. Quem faz coleta ganha ponto quando o doador pediu coleta.
 >
-> Na hora de doar, o app mostra o que pode e o que não pode, e registra a declaração do doador. E explica a segurança jurídica: pela Lei 15.224 de 2025, doador e instituição só respondem por danos se houver dolo, e a doação não configura relação de consumo. Isso tira o medo de quem tem medo.
+> E a nota vem explicada. Esta aqui está em primeiro porque precisa de cobertor,
+> está no bairro e é verificada. O doador não precisa confiar na ordem, ele vê o
+> porquê.
+
+Clique em Doar aqui na primeira.
+
+## Tomada 6, 1:25 a 1:45 — depois de doar
+
+Tela: a doação criada, com as cinco etapas. Abra o chat com a instituição.
+
+> Doação registrada, confirmação da instituição, coleta ou entrega, recebida e
+> impacto relatado. Cada etapa é confirmada por quem recebeu, não por quem doou.
+> E os dois lados conversam dentro do app, sem sair para o WhatsApp.
+
+## Tomada 7, 1:45 a 2:00 — a prova de que tem produto atrás
+
+Tela: duas janelas do navegador lado a lado. Faça uma doação na da esquerda e
+mostre ela aparecendo na da direita sozinha.
+
+> E não é protótipo de tela. Tem banco atrás. Esta doação foi feita nesta
+> janela, e apareceu na outra sem ninguém recarregar nada.
 >
-> Depois, a doação tem quatro etapas confirmadas pela instituição, do aceite até o relato de impacto, e os dois lados conversam dentro do app.
-
-## Pessoa 3 — o alcance e a trilha (1:45 a 2:40)
-
-> Eu sou o [nome]. Começou com alimento, mas não parou nele. Dá para doar roupa, material escolar, higiene, móveis, horas de voluntariado e dinheiro direto para a chave Pix da instituição. O IFOMME não processa pagamento: mostra a chave e a pessoa paga pelo próprio banco.
->
-> Instituição não entra na rede sem inspeção, e o resultado fica visível ao lado do nome.
->
-> A gente concorre na trilha de logística e automação, porque o coração disso é casar oferta com necessidade e organizar coleta e entrega.
-
-## Fechamento (2:40 a 3:00)
-
-Um de vocês, ou os três juntos:
-
-> O IFOMME está no ar em ifomme dot pages dot dev, com banco de verdade e código aberto. Obrigado.
+> Interface sem framework, hospedagem no Cloudflare Pages, API em Pages
+> Functions e banco no D1. Quem decide o acesso é o servidor, não o navegador.
 
 ---
 
-# Vídeo 2: submissão final
+## Se sobrar tempo
 
-Sem rosto obrigatório. Tela gravada com narração por cima. **Sem passar por tela de login.**
+Cortes que dão para encaixar, na ordem de valor:
 
-## 0:00 a 0:20 — o problema
-
-Tela: a página inicial do app.
-
-> Comida boa vai para o lixo enquanto milhões de pessoas vivem em insegurança alimentar. A trava não é falta de vontade de doar. É não saber para quem, é o medo de responder por um problema, e é a logística.
-
-## 0:20 a 1:10 — a instituição pede
-
-Tela: perfil da instituição, com as necessidades.
-
-> A instituição publica o que precisa hoje. Não é um cadastro genérico: é quantidade, urgência e horário de recebimento. Aqui o Abrigo São José precisa de 120 cobertores até quarta.
-
-## 1:10 a 2:00 — o doador doa
-
-Tela: escolher categoria, achar instituição por bairro, ler as regras, marcar a declaração, confirmar.
-
-> Do outro lado, o doador escolhe o que tem para doar e acha quem está perto. Antes de confirmar, o app mostra o que pode e o que não pode ser doado, e registra a declaração. E explica que, pela Lei 15.224 de 2025, a responsabilidade dele termina na primeira entrega.
-
-## 2:00 a 2:30 — a prova de que tem produto atrás
-
-Tela: duas janelas lado a lado. Fazer a doação numa e mostrar aparecendo na outra sozinha.
-
-> Não é protótipo de tela. Tem banco atrás. Esta doação foi feita nesta janela, e apareceu na outra sem ninguém recarregar nada.
-
-## 2:30 a 3:00 — arquitetura e roadmap
-
-Tela: o diagrama, ou a página `/sobre`.
-
-> Interface sem framework, hospedagem no Cloudflare Pages, API em Pages Functions e banco no D1. Quem decide o acesso é o servidor, não o navegador.
->
-> O próximo passo é roteirizar as coletas por voluntário e gerar o relatório de impacto para o doador empresarial.
-
----
+1. A aba Impacto, mostrando o acumulado do doador
+2. A categoria Dinheiro, deixando claro que o app mostra a chave Pix da
+   instituição e não processa pagamento
+3. A página `/sobre`, com a arquitetura
 
 ## Como gravar
 
-- **Tela:** a própria gravação de tela do Windows (tecla Windows + G) ou o OBS, que é gratuito
-- **Narração:** grave a voz depois, por cima, em vez de falar enquanto clica. Fica mais limpo e dá para errar sem perder a tomada
-- **Dados:** o app já está populado com 6 instituições e 4 publicações de exemplo. Não precisa preparar nada
-- **A cena das duas janelas** é a mais importante do vídeo 2. Ensaie ela antes
-- **Limite:** o painel não verifica a duração automaticamente, mas o regulamento diz até 3 minutos. Fique abaixo disso
+- **Tela:** a gravação do próprio Windows, tecla Windows mais G, ou o OBS, que é
+  gratuito
+- **Narração:** gravada depois, por cima
+- **Dados:** o app já está populado com seis instituições e quatro publicações.
+  Não precisa preparar nada
+- **Limite:** o regulamento diz até 3 minutos. Fique abaixo disso
 
 ## Onde publicar
 
-YouTube como **não listado**, ou Google Drive com link público. O regulamento exige que abra sem login.
+YouTube como **não listado**, ou Google Drive com link público. O regulamento
+exige que abra sem login. O mesmo link vai nos dois formulários.
