@@ -82,3 +82,27 @@ O D1 não empurra mudança para o navegador, diferente de um banco com canal de 
 Na prática: uma doação feita numa janela aparece na outra em até 3 segundos, sem recarregar. O custo é uma consulta de contagem por coleção a cada 3 segundos, por aba aberta. Para a escala de uma demonstração isso é barato, e evita a complexidade de manter conexão aberta.
 
 Se o volume crescer, o caminho é trocar o relógio por Durable Objects com WebSocket, sem mexer no aplicativo: quem muda é só o adaptador em `public/ifomme-db.js`.
+
+## O balão de perguntas
+
+O balão do canto da tela responde dúvidas sobre o projeto. Enquanto não houver
+chave, ele responde por uma base que já vem no navegador, em
+`public/assistente.js`. Isso basta para as perguntas mais comuns e nunca deixa
+o visitante sem resposta.
+
+Para ligar a IA, que responde pergunta livre:
+
+1. Pegue uma chave gratuita em https://aistudio.google.com/apikey
+2. No painel da Cloudflare, em Workers & Pages, abra o projeto `ifomme`
+3. Settings, Variables and Secrets, Add
+4. Tipo **Secret**, nome `GEMINI_API_KEY`, valor a chave
+5. Salve e publique de novo, com `npm run deploy`
+
+Nunca coloque a chave no código nem em arquivo do repositório.
+
+Opcionais, como variável comum: `GEMINI_MODEL` e `GEMINI_MODEL_RESERVA` trocam
+o modelo sem mexer no código.
+
+O limite é de 20 perguntas por rede e 300 no total a cada 24 horas, contadas na
+tabela `chat_uso` do D1. O que entra na tabela é um código derivado do endereço
+de rede; nem o endereço nem a pergunta são gravados.
