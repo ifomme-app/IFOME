@@ -2,6 +2,22 @@
 
 Atualizado em 13/11/2026. Faltam 17 dias para o prazo de submissão (30/11 às 23h59).
 
+## O que mudou em 26/11
+
+Entrou o balão de perguntas no canto da tela, em `public/assistente.js`, com a
+função `functions/api/chat.js` pronta para responder com IA quando houver uma
+chave `GEMINI_API_KEY` no painel do Cloudflare.
+
+A decisão foi entregar sem chave. O balão responde por uma base que já vem no
+navegador, cobrindo os dez assuntos mais perguntados: como doar, o que pode e o
+que não pode, como o app escolhe a instituição, a Lei 15.224, a verificação, o
+Pix, o acompanhamento, a tecnologia, o que é o projeto e como uma instituição
+participa. Depois do primeiro 503 o navegador para de chamar o servidor na
+visita, então a resposta sai na hora.
+
+Assim o visitante nunca abre o balão e encontra erro, e ligar a IA depois é só
+colar a chave, sem tocar em código.
+
 ## O que mudou em 13/11
 
 Quatro mudanças pedidas, todas feitas:
