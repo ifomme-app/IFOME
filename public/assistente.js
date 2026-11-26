@@ -24,13 +24,14 @@
     pensando: "Pensando...",
     curta: "Escreva uma pergunta com pelo menos algumas palavras.",
     limite: "O limite de perguntas de hoje foi atingido. Tente de novo amanhã.",
-    nota: "Respostas geradas por IA podem conter erros. Não escreva dados pessoais.",
+    nota: "Respostas automáticas podem conter erros. Não escreva dados pessoais.",
   };
 
   // Base local: responde sozinha quando a função do servidor não está no ar.
   var BASE = [
     {
-      termos: ["doar", "doação", "doacao", "como faço", "passos", "começar", "comecar"],
+      termos: ["como doar", "como dou", "quero doar", "fazer uma doacao", "quais passos",
+        "passo a passo", "comecar a doar", "doar", "doacao"],
       resposta:
         "A doação tem quatro passos. Primeiro você escolhe o que tem para doar, entre alimentos, roupas, dinheiro, voluntariado, material escolar, higiene e móveis. Depois informa a quantidade e a descrição. No terceiro passo escolhe entre coleta por um voluntário ou entrega no local. No quarto, o app mostra as instituições ordenadas pela compatibilidade com a sua doação e você escolhe uma.",
     },
@@ -53,42 +54,59 @@
         "Pode doar alimento in natura, industrializado ou preparado, excedente que não foi vendido ou sobra segura para consumo. Não pode doar resto já servido ou manipulado pelo consumidor, nem produto vencido ou impróprio. O app mostra essas regras antes de você confirmar e registra a sua declaração.",
     },
     {
-      termos: ["escolhe", "nota", "ordem", "ranking", "compatibilidade", "melhor ponte", "algoritmo"],
+      termos: ["como escolhe", "escolhe a instituic", "escolhe a ong", "melhor ponte",
+        "compatibilidade", "pontuacao", "criterio", "ranking", "ordena", "escolhe", "nota"],
       resposta:
         "O app dá uma nota a cada instituição para aquela doação específica. Pesa se ela pediu exatamente aquela categoria, se o pedido está marcado como urgente, a distância até você e o selo de verificação. Quem faz coleta ganha ponto quando você pede coleta. A nota vem com o motivo escrito do lado, então você vê por que aquela instituição está em primeiro.",
     },
     {
-      termos: ["lei", "responsabilidade", "jurídic", "juridic", "processo", "15.224", "segurança", "seguranca"],
+      termos: ["responsabilidade", "15.224", "juridic", "processar", "ser processado",
+        "passar mal", "intoxic", "advogado", "culpa", "lei"],
       resposta:
         "Pela Lei 15.224 de 2025, doador e instituição só respondem por dano se houver dolo, e a doação não configura relação de consumo. A responsabilidade do doador termina na primeira entrega. Essa lei revogou a Lei 14.016 de 2020.",
     },
     {
-      termos: ["verificad", "selo", "inspeç", "inspec", "confiar", "golpe", "fraude"],
+      termos: [
+        "verific",
+        "selo",
+        "inspe",
+        "confiar",
+        "confiavel",
+        "golpe",
+        "fraude",
+        "quem aprova",
+        "e seguro",
+      ],
       resposta:
         "Instituição não entra na rede sem inspeção. O resultado fica visível ao lado do nome: verificada, em inspeção ou pendente. Assim você sabe com quem está falando antes de doar.",
     },
     {
-      termos: ["dinheiro", "pix", "pagamento", "pagar", "taxa"],
+      termos: ["doar dinheiro", "quanto custa", "cobra taxa", "pagamento", "dinheiro",
+        "gratis", "pix", "pagar", "taxa"],
       resposta:
         "O IFOMME não processa pagamento e não cobra taxa. Na categoria dinheiro ele mostra a chave Pix da instituição e você paga pelo seu próprio banco.",
     },
     {
-      termos: ["acompanh", "etapa", "depois de doar", "status", "chegou", "recebi"],
+      termos: ["depois de doar", "minha doacao", "minha doação", "acompanh", "rastre",
+        "chegou", "entregue", "etapa", "andamento", "status", "recebi"],
       resposta:
         "Depois de registrada, a doação passa por cinco etapas: registrada, confirmada pela instituição, coleta ou entrega, recebida e impacto relatado. Quem confirma cada etapa é quem recebe. Você e a instituição conversam dentro do app.",
     },
     {
-      termos: ["feito", "tecnologia", "código", "codigo", "stack", "banco", "cloudflare", "github"],
+      termos: ["como foi feito", "arquitetura", "tecnologia", "framework", "codigo aberto",
+        "open source", "cloudflare", "github", "codigo", "stack", "banco de dados"],
       resposta:
         "A interface é HTML, CSS e JavaScript sem framework. A hospedagem é Cloudflare Pages, a API roda em Pages Functions e o banco é o Cloudflare D1. Quem decide o acesso é o servidor, não o navegador. O código é aberto em https://github.com/ifomme-app/IFOME.",
     },
     {
-      termos: ["o que é", "o que e", "serve", "ifomme", "projeto", "hackathon", "hack brasil"],
+      termos: ["para que serve", "o que e o ifomme", "como funciona", "hack brasil",
+        "hackathon", "quem fez", "o que e", "o que é", "projeto", "serve"],
       resposta:
         "O IFOMME conecta quem tem o que doar com instituições próximas e verificadas. Foi feito para o Hack Brasil 2026, na trilha de logística e automação. A página que explica o projeto é https://ifomme.pages.dev/sobre.",
     },
     {
-      termos: ["cadastr", "minha ong", "instituição quer", "instituicao quer", "entrar"],
+      termos: ["minha instituic", "sou de uma ong", "minha ong", "quero receber",
+        "como participo", "quero me cadastrar", "cadastr"],
       resposta:
         "A instituição publica o que precisa hoje, com quantidade, urgência e horário de recebimento, e passa por inspeção antes de ganhar o selo. Nesta demonstração os perfis de instituição, inspetor e equipe ficam disponíveis mediante aprovação da equipe.",
     },
@@ -296,6 +314,10 @@
   }
 
   var historico = [];
+  // Quando a função de IA não está configurada, ela responde 503. Depois do
+  // primeiro, nem tentamos de novo nesta visita: a resposta local sai na hora,
+  // sem a espera de uma chamada que já sabemos que falha.
+  var semServidor = false;
 
   async function perguntar(pergunta) {
     if (pergunta.length < 4) {
@@ -310,19 +332,23 @@
     var espera = bolha("ia espera", T.pensando);
     var resposta = null;
     var limite = false;
-    try {
-      var resp = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ pergunta: pergunta, historico: historico.slice(-6) }),
-      });
-      var dados = await resp.json().catch(function () {
-        return {};
-      });
-      if (resp.ok && dados.resposta) resposta = dados.resposta;
-      else if (dados.erro === "limite" || dados.erro === "cota") limite = true;
-    } catch (e) {
-      // sem rede ou função fora do ar: cai na base local
+    if (!semServidor) {
+      try {
+        var resp = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ pergunta: pergunta, historico: historico.slice(-6) }),
+        });
+        var dados = await resp.json().catch(function () {
+          return {};
+        });
+        if (resp.ok && dados.resposta) resposta = dados.resposta;
+        else if (dados.erro === "limite" || dados.erro === "cota") limite = true;
+        else if (resp.status === 503) semServidor = true;
+      } catch (e) {
+        // sem rede ou função fora do ar: cai na base local
+        semServidor = true;
+      }
     }
     espera.remove();
     if (limite) {
