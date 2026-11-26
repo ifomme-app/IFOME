@@ -86,3 +86,13 @@ create table if not exists admins (
 create index if not exists ongs_atualizado      on ongs      (updated_at desc);
 create index if not exists posts_atualizado     on posts     (updated_at desc);
 create index if not exists campanhas_atualizado on campanhas (updated_at desc);
+
+-- Contagem diária de perguntas ao assistente, para não estourar a cota
+-- gratuita da IA. Guarda um código derivado da rede, nunca o endereço, e
+-- nunca a pergunta.
+create table if not exists chat_uso (
+  chave  text not null,
+  dia    text not null,
+  n      integer not null default 0,
+  primary key (chave, dia)
+);
